@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Educational Insert Sort"
+rootProject.name = "EIS"
 include(":app")

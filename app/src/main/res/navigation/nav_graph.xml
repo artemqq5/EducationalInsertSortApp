@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.educational.insertsort.presentation.fragments.splash_screen.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_splashFragment_to_helloFragment"
+            app:destination="@id/helloFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/helloFragment"
+        android:name="com.educational.insertsort.presentation.fragments.hello_screen.HelloFragment"
+        android:label="fragment_hello"
+        tools:layout="@layout/fragment_hello">
+        <action
+            android:id="@+id/action_helloFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.educational.insertsort.presentation.fragments.home_screen.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_practiceFragment"
+            app:destination="@id/practiceFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_homeFragment_to_theoryFragment"
+            app:destination="@id/theoryFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/practiceFragment"
+        android:name="com.educational.insertsort.presentation.fragments.practice_screen.PracticeFragment"
+        android:label="fragment_practice"
+        tools:layout="@layout/fragment_practice">
+        <action
+            android:id="@+id/action_practiceFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_practiceFragment_to_practiceSectionFragment"
+            app:destination="@id/practiceSectionFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/theoryFragment"
+        android:name="com.educational.insertsort.presentation.fragments.theory_screen.TheoryFragment"
+        android:label="fragment_theory"
+        tools:layout="@layout/fragment_theory">
+        <action
+            android:id="@+id/action_theoryFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_theoryFragment_to_theorySectionFragment"
+            app:destination="@id/theorySectionFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/theorySectionFragment"
+        android:name="com.educational.insertsort.presentation.fragments.theory_screen.TheorySectionFragment"
+        android:label="fragment_theory_section"
+        tools:layout="@layout/fragment_theory_section">
+        <action
+            android:id="@+id/action_theorySectionFragment_to_theoryFragment"
+            app:destination="@id/theoryFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <argument
+            android:name="model"
+            app:argType="com.educational.insertsort.data.model.TheoryModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/practiceSectionFragment"
+        android:name="com.educational.insertsort.presentation.fragments.practice_screen.PracticeSectionFragment"
+        android:label="fragment_practice_section"
+        tools:layout="@layout/fragment_practice_section">
+        <action
+            android:id="@+id/action_practiceSectionFragment_to_practiceFragment"
+            app:destination="@id/practiceFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <argument
+            android:name="model"
+            app:argType="com.educational.insertsort.data.model.PracticeModel" />
+        <action
+            android:id="@+id/action_practiceSectionFragment_to_practiceResultFragment"
+            app:destination="@id/practiceResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/practiceResultFragment"
+        android:name="com.educational.insertsort.presentation.fragments.practice_screen.PracticeResultFragment"
+        android:label="fragment_practice_result"
+        tools:layout="@layout/fragment_practice_result" >
+        <action
+            android:id="@+id/action_practiceResultFragment_to_practiceFragment"
+            app:destination="@id/practiceFragment" />
+        <argument
+            android:name="result"
+            app:argType="com.educational.insertsort.presentation.fragments.practice_screen.model.LinkedHashMapWrapper"/>
+    </fragment>
+</navigation>

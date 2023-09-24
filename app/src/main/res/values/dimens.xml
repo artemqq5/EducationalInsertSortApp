@@ -1,3 +1,6 @@
 <resources>
-    <dimen name="text_margin">16dp</dimen>
+    <dimen name="big_margin">30dp</dimen>
+    <dimen name="medium_margin">20dp</dimen>
+    <dimen name="easy_margin">10dp</dimen>
+    <dimen name="extra_easy_margin">5dp</dimen>
 </resources>

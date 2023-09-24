@@ -1,92 +1,102 @@
 <resources>
-    <string name="app_name">Educational Insert Sort</string>
-    <string name="large_text">
-        "Material is the metaphor.\n\n"
+    <string name="app_name">EIS</string>
 
-        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
-        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
-        "technologically advanced and open to imagination and magic.\n"
-        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
-        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
-        "flexibility of the material creates new affordances that supercede those in the physical "
-        "world, without breaking the rules of physics.\n"
-        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
-        "interact, and exist in space and in relation to each other. Realistic lighting shows "
-        "seams, divides space, and indicates moving parts.\n\n"
-
-        "Bold, graphic, intentional.\n\n"
-
-        "The foundational elements of print based design typography, grids, space, scale, color, "
-        "and use of imagery guide visual treatments. These elements do far more than please the "
-        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
-        "imagery, large scale typography, and intentional white space create a bold and graphic "
-        "interface that immerse the user in the experience.\n"
-        "An emphasis on user actions makes core functionality immediately apparent and provides "
-        "waypoints for the user.\n\n"
-
-        "Motion provides meaning.\n\n"
-
-        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
-        "inflection points that initiate motion, transforming the whole design.\n"
-        "All action takes place in a single environment. Objects are presented to the user without "
-        "breaking the continuity of experience even as they transform and reorganize.\n"
-        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
-        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
-
-        "3D world.\n\n"
-
-        "The material environment is a 3D space, which means all objects have x, y, and z "
-        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
-        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
-        "position along the z-axis and has a standard 1dp thickness.\n"
-        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
-        "emulated by manipulating the y-axis.\n\n"
-
-        "Light and shadow.\n\n"
-
-        "Within the material environment, virtual lights illuminate the scene. Key lights create "
-        "directional shadows, while ambient light creates soft shadows from all angles.\n"
-        "Shadows in the material environment are cast by these two light sources. In Android "
-        "development, shadows occur when light sources are blocked by sheets of material at "
-        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
-        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
-
-        "Resting elevation.\n\n"
-
-        "All material objects, regardless of size, have a resting elevation, or default elevation "
-        "that does not change. If an object changes elevation, it should return to its resting "
-        "elevation as soon as possible.\n\n"
-
-        "Component elevations.\n\n"
-
-        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
-        "does not vary from 6dp in one app to 16dp in another app).\n"
-        "Components may have different resting elevations across platforms, depending on the depth "
-        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
-
-        "Responsive elevation and dynamic elevation offsets.\n\n"
-
-        "Some component types have responsive elevation, meaning they change elevation in response "
-        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
-        "changes are consistently implemented using dynamic elevation offsets.\n"
-        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
-        "to the component’s resting state. They ensure that elevation changes are consistent "
-        "across actions and component types. For example, all components that lift on press have "
-        "the same elevation change relative to their resting elevation.\n"
-        "Once the input event is completed or cancelled, the component will return to its resting "
-        "elevation.\n\n"
-
-        "Avoiding elevation interference.\n\n"
-
-        "Components with responsive elevations may encounter other components as they move between "
-        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
-        "through other material, components avoid interfering with one another any number of ways, "
-        "whether on a per component basis or using the entire app layout.\n"
-        "On a component level, components can move or be removed before they cause interference. "
-        "For example, a floating action button (FAB) can disappear or move off screen before a "
-        "user picks up a card, or it can move if a snackbar appears.\n"
-        "On the layout level, design your app layout to minimize opportunities for interference. "
-        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
-        "when a user tries to pick up one of cards.\n\n"
+    <string name="hello_text">
+        "Привіт, користувачу!\n\nЛаскаво просимо до додатку для вивчення"
+        "алгоритму сортування вставками \n\"EIS - Educational Insertion Sort\"! Сортування є однією з"
+        "найбільш базових, але важливих концепцій в програмуванні та обчислювальній науці. Цей "
+        "алгоритм є основою для розуміння більш складних алгоритмів та їх застосувань.\n\n\n"
+        "Ти готовий починати?"
     </string>
+
+    <string name="start_btn_text">"Почати"</string>
+    <string name="exit_snackbar">"Натисніть ще раз щоб вийти"</string>
+    <string name="go_back_snackbar">"Натисніть ще раз щоб повернутися до розділу"</string>
+    <string name="tips_card">"Порада до вивчення"</string>
+
+    <string name="tipsToLearn1">"Розбийте велику задачу на менші для кращого розуміння алгоритму"</string>
+    <string name="tipsToLearn2">"Зрозумійте, як Insertion Sort відрізняється від інших алгоритмів сортування"</string>
+    <string name="tipsToLearn3">"Візуалізуйте кожний крок алгоритму, це допоможе зрозуміти його поведінку"</string>
+    <string name="tipsToLearn4">"Практикуйте на різних наборах даних, включаючи відсортовані, невідсортовані та збалансовані набори"</string>
+    <string name="tipsToLearn5">"Застосовуйте Insertion Sort у реальних проектах, щоб краще зрозуміти його переваги та недоліки"</string>
+    <string name="tipsToLearn6">"Проводьте час на аналізі часової складності, щоб знати, коли краще використовувати Insertion Sort"</string>
+    <string name="tipsToLearn7">"Ламайте код. Помилки — це засіб для навчання"</string>
+    <string name="tipsToLearn8">"Знайте свої інструменти. Вивчення скорочень клавіш у вашому IDE може значно підвищити вашу продуктивність"</string>
+    <string name="tipsToLearn9">"Зробіть паузи. Ваш мозок потребує відпочинку для ефективного навчання"</string>
+    <string name="tipsToLearn10">"Обговорюйте концепції алгоритму з іншими, це допомагає закріпити знання"</string>
+    <string name="tipsToLearn11">"Дон\'t over-optimize. Спершу зробіть код працездатним, потім оптимізованим"</string>
+    <string name="tipsToLearn12">"Вивчайте з документації. Офіційна документація - один з найкращих ресурсів для глибокого розуміння"</string>
+    <string name="tipsToLearn13">"Розумійте, що "чистий код" - це не завжди \"короткий код\""</string>
+    <string name="tipsToLearn14">"Регулярно перевіряйте свої знання. Самооцінка дуже важлива"</string>
+    <string name="tipsToLearn15">"Вивчайте з прикладами. Теорія без практики рідко є ефективною"</string>
+    <string name="tipsToLearn16">"Пробуйте викладати. Навчання інших допомагає краще зрозуміти матеріал"</string>
+    <string name="tipsToLearn17">"Використовуйте юніт-тести для перевірки коректності вашого коду"</string>
+    <string name="tipsToLearn18">"Зберігайте рівновагу між навчанням та відпочинком"</string>
+    <string name="tipsToLearn19">"Робіть резервні копії вашого коду. Версійний контроль може врятувати вас в критичних ситуаціях"</string>
+    <string name="tipsToLearn20">"Не бійтеся запитань. Якщо щось незрозуміло, краще запитати, ніж просто здогадуватися"</string>
+    <string name="theoretical_part">"Теорія"</string>
+    <string name="practice_part">"Практика"</string>
+    <string name="education_text_label">"Навчання"</string>
+    <string name="progress_text_label">"Прогрес"</string>
+    <string name="settings">"Налаштування"</string>
+    <string name="statistic_text_label">"Статистика"</string>
+    <string name="statistic_test_7d">"Кількість правильний відповідей\nза 7 днів"</string>
+    <string name="reset_progress_text">"Скинути прогрес"</string>
+
+    <string name="theory_screen_label">"Розділ теорії"</string>
+    <string name="practice_screen_label">"Розділ практики"</string>
+
+<!--    TEST TEXT-->
+    <string name="lvl1_label">"Частина 1"</string>
+    <string name="lvl1_title">"Основи Сортування Вставками"</string>
+    <string name="lvl1_desc">
+        "Введення"
+
+        "\n\nСортування вставками (Insertion Sort) — це один з найпростіших алгоритмів сортування, "
+        "що відтворює спосіб, як люди сортують картки в руках. Він працює на принципі вставки "
+        "окремих елементів на правильне місце в відсортованій частині масиву."
+
+        "\n\n"Для кого підходить цей алгоритм?"
+
+        "\n\nЦей алгоритм ефективно працює на невеликих наборах даних або на даних, які вже частково відсортовані."
+
+        "\n\nОсновні Характеристики"
+        "\n- Тип алгоритму: Компаративний (порівнює елементи між собою)"
+        "\n- Часова Складність: В худшому і середньому випадках — O(n^2), в найкращому — O(n)"
+        "\n- Стійкість: Стійкий (зберігає відносний порядок однакових елементів)"
+
+        "\n\nКлючові Терміни"
+        "\n- Відсортована частина: Частина масиву, де всі елементи вже відсортовані."
+        "\n- Не відсортована частина: Частина масиву, де елементи ще не відсортовані."
+
+        "\n\nРобочий Принцип"
+        "\n1. Ініціалізація: Починаємо з першого елемента масиву і вважаємо його відсортованим."
+        "\n2. Вибір Елемента: Вибираємо наступний елемент з не відсортованої частини масиву."
+        "\n3. Порівняння і Вставка*: Порівнюємо цей елемент з елементами в відсортованій частині масиву,"
+        "\nі вставляємо його на відповідне місце так, щоб масив залишався відсортованим."
+        "\n4. Повтор: Процес повторюється для кожного елемента в не відсортованій частині масиву."
+
+        "\n\nПсевдокод"
+        "\nfor i from 1 to n-1"
+        "\n\t\t\tj = i"
+        "\n\t\t\twhile j > 0 and array[j-1] > array[j]"
+        "\n\t\t\t\t\t\tswap array[j] and array[j-1]"
+        "\n\t\t\t\t\t\tj = j - 1"
+    </string>
+    <!--    TEST TEXT END -->
+
+    <string name="complete_part_text">"Ознайомився"</string>
+    <string name="count_question_text">"Кількість питань: %s"</string>
+    <string name="next_question_text">"Відповісти"</string>
+    <string name="current_question_num">"Питання %s з %s"</string>
+    <string name="result_text">"Результат"</string>
+    <string name="question_text">"Питання"</string>
+    <string name="answer_test">"Відповідь"</string>
+    <string name="right_answer_text">"Правильна Відповідь"</string>
+    <string name="explanation_text">"Пояснення"</string>
+
+    <string name="no_answer_text">"Не дано відповідь"</string>
+    <string name="count_right_answer">"%s Питань з %s"</string>
+
 </resources>
+

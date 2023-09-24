@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/medium_margin"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:background="?android:attr/colorForeground"
+        android:layout_marginBottom="@dimen/easy_margin"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pitagon_bold"
+        android:text="@string/question_text"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pitagon_light"
+        android:textSize="12sp"
+        tools:text="Що є основною ідеєю сортування вставками?" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/easy_margin"
+        android:fontFamily="@font/pitagon_bold"
+        android:text="@string/answer_test"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pitagon_light"
+        android:textSize="12sp"
+        tools:text="Порівняння кожного елементу з усіма іншими"
+        tools:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/rightAnswerDefault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/easy_margin"
+        android:fontFamily="@font/pitagon_bold"
+        android:text="@string/right_answer_text"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/rightAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pitagon_light"
+        android:textSize="12sp"
+        tools:text="Елементу з усіма іншими"
+        tools:textColor="@color/green" />
+
+    <TextView
+        android:id="@+id/explanationDefault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/easy_margin"
+        android:fontFamily="@font/pitagon_bold"
+        android:text="@string/explanation_text"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/explanation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pitagon_light"
+        android:textSize="12sp"
+        tools:text="Ініціалізація: Починаємо з першого елемента масиву і вважаємо" />
+
+
+</LinearLayout>
