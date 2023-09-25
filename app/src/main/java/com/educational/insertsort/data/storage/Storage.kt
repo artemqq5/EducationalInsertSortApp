@@ -11,7 +11,7 @@ interface Storage {
 
     suspend fun firstUserStart(): Boolean
     suspend fun getLastSaveDataStatistic(): String
-    suspend fun setLastSaveDataStatistic(date: String?)
+    suspend fun setLastSaveDataStatistic()
 
     suspend fun getDataStatisticList(): Flow<FloatArray>
     suspend fun updateDataStatisticDay(day: String, value: Float)

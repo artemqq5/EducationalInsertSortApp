@@ -26,6 +26,7 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.util.Calendar
 
 class HomeFragment : Fragment() {
 
@@ -118,8 +119,19 @@ class HomeFragment : Fragment() {
                 viewModelStatistic.getLastSavedDate()
             }
 
+            logs(
+                "RESULT: \n" +
+                        "is same week ${
+                            isSameWeek(
+                                currentDate(),
+                                lastSavedDate.lastSaveCalendar()
+                            )
+                        }\n" +
+                        "currentDate = ${currentDate().get(Calendar.WEEK_OF_YEAR)}\n" +
+                        "lastSavedDate = ${lastSavedDate.lastSaveCalendar().get(Calendar.WEEK_OF_YEAR)}"
+            )
+
             if (!isSameWeek(currentDate(), lastSavedDate.lastSaveCalendar())) {
-                viewModelStatistic.setLastSavedDate(null)
                 viewModelStatistic.clearTestStatisticData()
             }
         }

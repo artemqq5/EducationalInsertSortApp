@@ -65,19 +65,9 @@ class PracticeResultFragment : Fragment() {
             val lastSavedDate = withContext(Dispatchers.IO) {
                 viewModelStatistic.getLastSavedDate()
             }
-//            logs(
-//                "RESULT: \n" +
-//                        "is same week ${
-//                            isSameWeek(
-//                                currentDate(),
-//                                lastSavedDate.lastSaveCalendar()
-//                            )
-//                        }"
-//            )
 
             if (!isSameWeek(currentDate(), lastSavedDate.lastSaveCalendar())) {
                 viewModelStatistic.clearTestStatisticData()
-                viewModelStatistic.setLastSavedDate(null)
             }
 
             viewModelStatistic.updateTestStatisticData(

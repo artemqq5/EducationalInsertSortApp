@@ -58,10 +58,9 @@ class StorageImpl(private val context: Context) : Storage {
         return context.dataStore.data.first()[LAST_SAVE_DATA] ?: today
     }
 
-    override suspend fun setLastSaveDataStatistic(date: String?) {
+    override suspend fun setLastSaveDataStatistic() {
         context.dataStore.edit {
-            it[LAST_SAVE_DATA] = date
-                ?: SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
+            it[LAST_SAVE_DATA] = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
         }
     }
 

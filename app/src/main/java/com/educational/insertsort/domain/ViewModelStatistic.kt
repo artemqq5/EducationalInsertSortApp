@@ -24,12 +24,14 @@ class ViewModelStatistic(private val storage: Storage) : ViewModel() {
     fun clearTestStatisticData() {
         viewModelScope.launch(Dispatchers.IO + excHandler) {
             storage.resetStatisticListData()
+            storage.setLastSaveDataStatistic()
         }
     }
 
     fun updateTestStatisticData(day: String, value: Float) {
         viewModelScope.launch(Dispatchers.IO + excHandler) {
             storage.updateDataStatisticDay(day = day, value = value)
+            storage.setLastSaveDataStatistic()
         }
     }
 
@@ -37,9 +39,9 @@ class ViewModelStatistic(private val storage: Storage) : ViewModel() {
         return storage.getLastSaveDataStatistic()
     }
 
-    fun setLastSavedDate(date: String?) {
+    fun setLastSavedDate() {
         viewModelScope.launch(Dispatchers.IO + excHandler) {
-            storage.setLastSaveDataStatistic(date)
+            storage.setLastSaveDataStatistic()
         }
     }
 }
